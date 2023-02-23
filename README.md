@@ -1,7 +1,7 @@
 # Trabalho Prático [gcc-132] ClimaBR
 
 Aplicação web para consulta da previsão do tempo de cidades brasileiras.
-Código base disponibilizado pelo prof **Paulo Afonso** para o Trabalho final da disciplina de Modelagem e Implementação de Software.
+Código base disponibilizado pelo prof **Paulo Afonso** para o Trabalho final da disciplina de **Modelagem e Implementação de Software**.
 A funcionalidade implementada foi a de Histórico de Consultas. Ao digitar a cidade para busca, a string da cidade selecionada é armazenada e 
 posteriormente disponibilizada como histórico, de modo que ao seleciona-la, é como se estivesse digitando novamente a string na barra de pesquisa, todas as opções com aquela string aparecem.  
 
