@@ -9,6 +9,9 @@ Clone este repositório.
 Entre na pasta do projeto e execute o comando abaixo para instalar as dependências:
 
 `npm install`
+`npm install -g ionic cordova`
+`ionic cordova plugin add cordova-sqlite-storage`
+`npm install @ionic/storage-angular`
 
 Acesse o site https://openweathermap.org/api, faça seu cadastro e crie uma chave de API.
 
