@@ -28,7 +28,7 @@ async addSearch(searchTerm: string) {
       // Se ele já está lá, é removido da posição atual
       this.history.splice(index, 1);
     }
-    // Add the search term to the beginning of the history array Add o search Term no inicio do vetor history, de modo que seja o primeiro a aparecer no histórico.
+    // Add o search Term no inicio do vetor history, de modo que seja o primeiro a aparecer no histórico.
     this.history.unshift(searchTerm);
     this.history = this.history.slice(0, 5); // Limita pra até 5 termos no histórico
     await this.storage.set(this.HISTORY_KEY, this.history);
