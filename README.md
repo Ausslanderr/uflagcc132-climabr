@@ -7,6 +7,9 @@ posteriormente disponibilizada como histórico, de modo que ao seleciona-la, é 
 
 **Integrantes**
 * **Davi Hermógenes Siqueira**
+* **Rafael Furtado Morais**
+* **Guilherme Fabricio Brito da Rosa**
+* **Luis Felipe Rezende Silva**
 
 
 # Como utilizar?
