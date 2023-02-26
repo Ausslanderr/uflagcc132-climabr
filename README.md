@@ -5,6 +5,10 @@ Código base disponibilizado pelo prof **Paulo Afonso** para o Trabalho final da
 A funcionalidade implementada foi a de Histórico de Consultas. Ao digitar a cidade para busca, a string da cidade selecionada é armazenada e 
 posteriormente disponibilizada como histórico, de modo que ao seleciona-la, é como se estivesse digitando novamente a string na barra de pesquisa, todas as opções com aquela string aparecem.  
 
+**Integrantes**
+* **Davi Hermógenes Siqueira**
+
+
 # Como utilizar?
 
 Clone este repositório.
