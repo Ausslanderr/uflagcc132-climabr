@@ -12,12 +12,14 @@ export class SearchHistoryService {
 
   constructor(private storage: Storage) {}
 
-  async loadHistory() {//Esta função carrega o historico de pesqusia do device storage usando o Storage service. Se o historico for encontrado, ele atualiza o vetor de historico. Ela é chamda no ngOnInit lifecycle hook do componente Home.page.ts para carregar o historico de pesquisa qnd o componente é inicializado
+
+  async loadHistory() {////Esta função carrega o histórico de pesquisa do device storage usando o Storage service. Se o histórico for encontrado, ele atualiza o vetor de histórico com o histórico carregado. Essa função é chamada no ngOnInit lifecycle hook do componente HomePage para carregar o histórico de pesquisa quando o componente é inicializado
     const history = await this.storage.get(this.HISTORY_KEY);
     if (history) {
       this.history = history;
     }
   }
+
 async addSearch(searchTerm: string) {
   if (searchTerm) {
     // Verifica se o search term já existe dentro do vetor history
@@ -33,6 +35,7 @@ async addSearch(searchTerm: string) {
   }
 }
   getHistory() {//Essa função simplesmente retorna o historico de pesquisa como um vetor de strings. Simplesmente retorna o vetor de historico. Ela é chamada no modelo do componente homepage.ts para exibir o historico de pesquisa
+
     return this.history;
   }
 }
