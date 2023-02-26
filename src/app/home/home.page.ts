@@ -32,8 +32,7 @@ export class HomePage {
     this.history = this.searchHistoryService.getHistory();
   }
 
-  async onSearch(query: string) {// is called when the user types something in the search bar and hits enter or changes
-    //the input. it calls the searchbyname to get the list of cities matching the query, and assign it to the cities property
+  async onSearch(query: string) {
     try {
       this.errorMessage = null;
       this.cities = await this.cityService.searchByName(query);
@@ -42,19 +41,11 @@ export class HomePage {
     }
   }
 
-  async onSelect(city: City) { //this function is called when the user clicks on a city in the search results, it uses the router to navigate to the weather page for that city, passing the city ID as a parameter. it also adds the city name to the search history sing addsearch
+  async onSelect(city: City) {
     await this.router.navigateByUrl(`/weather/${city.id}`, { replaceUrl: true });
-    this.searchHistoryService.addSearch(city.name);
-    this.navController.navigateRoot(['/city', city.id]).catch(error => console.error(error)); //tratamento de erro
+    this.searchHistoryService.addSearch(city.name);// adiciona o termo pesquisado (nome da cidade) ao histórico
+    //this.navController.navigateRoot(['/city', city.id]).catch(error => console.error(error)); //tratamento de erro
+    this.history = this.searchHistoryService.getHistory();//atualiza o histórico com o novo termo pesquisado
   }
 
-  async search() {// this function is called when the user clicks the search button or hits enter in the search bar. if the search bar is not empty, it adds it to the search history using the addsearch function and updates the history property with the new search history.
-    if (this.searchTerm) {
-
-          await this.searchHistoryService.addSearch(this.searchTerm);
-          this.history = this.searchHistoryService.getHistory();
-      
-      this.searchTerm = '';
-    }
-  }
 }
